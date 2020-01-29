@@ -3,13 +3,13 @@
     <div class="row align-items-center">
       <div class="col-md-12 text-center">
         <div v-if="loading === true">
-            <p class="text-muted center-text">Loading, please wait...</p>
+            <p class="text-muted center-text">Status van de website aan het controleren, even geduld...</p>
         </div>
         <div v-else-if="error !== false">
-            <p class="center-text">An error occured {{error.message || error}}</p>
+            <p class="center-text">Er gaat iets fout... {{error.message || error}}</p>
         </div>
         <div v-else-if="checks === null || checks.length === 0">
-            <p class="center-text">No checks found</p>
+            <p class="center-text">Niets gevonden, stel websites in updown.io in.</p>
         </div>
         <div v-else>
           <hr/>
@@ -26,7 +26,7 @@
                     {{thisCheck.alias || thisCheck.url}}
                   </h5>
                   <h6 class="card-subtitle mb-2 text-muted">
-                    <a class="nolink" :href="'https://updown.io/' + thisCheck.token" target="_blank">Last check: {{thisCheck.last_check_at}}</a>
+                    <a class="nolink" :href="'https://updown.io/' + thisCheck.token" target="_blank">Laatste controle: {{thisCheck.last_check_at}}</a>
                   </h6>
                 </div>
                 <div class="col-md-2" id="uptime">
