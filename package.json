@@ -10,7 +10,7 @@
     "build": "node build/build.js"
   },
   "dependencies": {
-    "node-updown": "^0.2.2",
+    "node-updown": "^1.0.2",
     "vue": "^2.5.2"
   },
   "devDependencies": {
